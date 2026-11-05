@@ -5,3 +5,5 @@
 - unlimited channels and chips
 - fix possible issues when moving selection
 - fix Metal intro crash
+- Import modules as subsongs
+- 4096 instrument limit
