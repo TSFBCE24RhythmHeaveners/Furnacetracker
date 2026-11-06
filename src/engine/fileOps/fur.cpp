@@ -2444,6 +2444,15 @@ bool DivEngine::loadFur(unsigned char* file, size_t len, int variantID) {
       }
     }
 
+    // POKEY AUDCTL compat
+    if (ds.version<258) {
+      for (int i=0; i<ds.systemLen; i++) {
+        if (ds.system[i]==DIV_SYSTEM_POKEY) {
+          ds.systemFlags[i].set("audctlCombine",false);
+        }
+      }
+    }
+
     // warn on partial pitch linearity
     if (ds.compatFlags.linearPitch>1) {
       ds.compatFlags.linearPitch=1;
