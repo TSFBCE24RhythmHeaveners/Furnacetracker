@@ -10075,6 +10075,8 @@ FurnaceGUI::FurnaceGUI():
   macroScaleY(100.0f),
   macroRandMin(0),
   macroRandMax(0),
+  pendingMacroAdjBottom(0),
+  pendingMacroAdjTop(0),
   macroLoopDragStart(0,0),
   macroLoopDragAreaSize(0,0),
   macroLoopDragTarget(NULL),
